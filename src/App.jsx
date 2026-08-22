@@ -1,11 +1,10 @@
 import React from 'react'
+import Header from './Components/Header/Header'
 
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline text-red-600">
-      Tailwind is working!
-    </h1>
+      <Header />
     </div>
   )
 }
