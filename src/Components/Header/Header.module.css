@@ -1,5 +1,5 @@
 /* header part */
-.header{
+.header {
     background: transparent;
     padding: 16px 0;
     position: fixed;
@@ -8,10 +8,14 @@
     width: 100%;
     z-index: 1000;
     backdrop-filter: blur(3px);
-    background-color: black;
+    transition: background-color 0.4s ease;
 }
 
-.container{
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +25,7 @@
     gap: 40px;
 }
 
-.logo{
+.logo {
     flex-shrink: 0;
     width: 100px;
     height: 30px;
@@ -30,7 +34,7 @@
     cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
     opacity: 0.8;
 }
 
@@ -55,7 +59,7 @@
     color: #b3b3b0;
 }
 
-/* right sude section */
+/* right side section */
 .rightSection {
     display: flex;
     align-items: center;
@@ -71,7 +75,7 @@
 }
 
 .SearchButton {
-    background:  none;
+    background: none;
     border: none;
     color: #f5f5f1;
     cursor: pointer;
@@ -185,7 +189,8 @@
         opacity: 0;
         transform: translateY(-10px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -201,7 +206,7 @@
     cursor: pointer;
     border: none;
     font-size: 14px;
-    transition: background-color 0.2 ease;
+    transition: background-color 0.2s ease;
     text-decoration: none;
 }
 
@@ -213,4 +218,67 @@
     border: none;
     border-top: 1px solid #404040;
     margin: 8px 0;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 24px;
+        gap: 24px;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+
+    .navLink {
+        font-size: 13px;
+    }
+
+    .searchInput {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .searchInput {
+        width: 120px;
+    }
+
+    .rightSection {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .searchInput {
+        width: 100px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .rightSection {
+        gap: 12px;
+    }
 }
