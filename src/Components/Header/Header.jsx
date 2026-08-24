@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from '../../assets/Images/logo.png';
+import logo from '../assets/Images/logo.png';
 import { Link } from 'react-router-dom';
 import { Search, Bell, User, ChevronDown } from 'lucide-react';
 import styles from './Header.module.css';

@@ -1,5 +1,5 @@
 import React from 'react'
-import NetflixBannerLogo from '../../assets/Images/logo.png'
+import NetflixBannerLogo from '../assets/Images/logo.png'
 import {Play, Info} from 'lucide-react'
 import Styles from './Banner.module.css'
 
