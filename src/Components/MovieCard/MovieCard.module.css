@@ -21,10 +21,10 @@
 .hoverCard {
     position: absolute;
     top: -50px;
-    left: 55%;
+    left: 43%;
     transform: translateX(-50%) scale(0.95);
-    width: 320px;
-    min-height: 305px;
+    width: 260px;
+    min-height: 300px;
     height: auto;
     background: #111;
     border-radius: 8px;
