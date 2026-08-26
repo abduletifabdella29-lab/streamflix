@@ -5,6 +5,8 @@ import { BsPlusCircle } from "react-icons/bs";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
+const IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
+
 function MovieCard({ movie }) {
 
     let geners = ['Adventure', 'Action', 'Thriller']
@@ -12,12 +14,15 @@ function MovieCard({ movie }) {
     return (
         <div className={styles.cardWrapper}>
             {/* poster image */}
-            <img className={styles.poster} src={movie?.poster_path} alt="poster image" />
+            {movie?.poster_path && (
+                <img className={styles.poster} src={`${IMAGE_BASE}${movie.poster_path}`} alt="poster image" />
+            )}
 
             {/* hover card  */}
             <div className={styles.hoverCard}>
-                {/* img  */}
-                <img className={styles.hoverImage} src={movie?.poster_path} alt="hover image" />
+                {movie?.poster_path && (
+                    <img className={styles.hoverImage} src={`${IMAGE_BASE}${movie.poster_path}`} alt="hover image" />
+                )}
 
                 {/* badge */}
                 <div className={styles.badge}>Recently added</div>

@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
 function SlideShow({ title, movies }) {
+    const safeMovies = Array.isArray(movies) ? movies : [];
+    
     return (
         <div>
             <h2 className={styles.title}>{title}</h2>
@@ -18,7 +20,7 @@ function SlideShow({ title, movies }) {
                     spaceBetween={10}
                     slidesPerView={4.5}
                 >
-                    {movies?.map((movie) => (
+                    {safeMovies.map((movie) => (
                         <SwiperSlide key={movie.id}>
                             <MovieCard movie={movie} />
                         </SwiperSlide>
